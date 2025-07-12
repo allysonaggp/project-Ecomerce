@@ -281,11 +281,12 @@ margin: 1rem 0;
 }
 
 .download-options>div img{
-  width: 180px;
+  width: 150px;
 }
 
 .logo-footer{
   text-align: center;
+  width: 660px;
 }
 
 .links-footer h3{
