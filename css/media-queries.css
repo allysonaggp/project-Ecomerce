@@ -45,4 +45,17 @@
   .cols-4 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .exclusive-container {
+    flex-direction: column-reverse;
+  }
+  .exclusive-container img{
+    margin-bottom: 4rem;
+
+  }
+  .testemonials{
+    flex-direction: column; 
+  }
+  .testemonials{
+    margin-bottom: 1.2rem;
+  }
 }
