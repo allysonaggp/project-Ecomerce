@@ -44,17 +44,17 @@ header {
 nav ul {
   display: flex;
 }
-.nav-icon-container {
+.nav-icon-content {
   display: flex;
   align-items: center;
 }
 
-.nav-icon-container img {
+.nav-icon-content img {
   width: 30px;
   cursor: pointer;
 }
 
-.nav-icon-container img:first-child {
+.nav-icon-content img:first-child {
   margin-right: 1rem;
 }
 nav ul li {
@@ -204,13 +204,13 @@ main {
   font-weight: 600;
 }
 
-.exclusive-container {
+.exclusive-content {
   color: white;
   flex-direction: row-reverse;
   padding: 5rem 1rem;
 }
 
-.exclusive-container img {
+.exclusive-content img {
   max-width: 500px;
 }
 
@@ -257,4 +257,55 @@ main {
 
 .testemonial p:last-child{
 font-weight: bold;
+}
+
+/* Footer */
+.footer-content{
+  display: flex;
+  align-items: center;
+  color: #8f8f8f;
+  padding: 4rem 1rem;
+  gap: 2rem;
+}
+
+.download-options>*{
+margin: 1rem 0;
+}
+.download-options>p:first-child{
+  font-weight: bold;
+  color: white;
+
+}
+.download-options>div{
+  display: flex;
+}
+
+.download-options>div img{
+  width: 180px;
+}
+
+.logo-footer{
+  text-align: center;
+}
+
+.links-footer h3{
+  color: white;
+  margin-bottom: 0.8rem;
+}
+
+.links-footer ul{
+  list-style: none;
+
+}
+
+.links-footer ul li{
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+
+}
+
+.copyright{
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
 }
