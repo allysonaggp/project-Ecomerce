@@ -1,5 +1,5 @@
 .box-product {
-    background-color:#ffffff;
+    background-color: #ffffff;
     display: flex;
     padding: 3rem 0;
 
@@ -16,10 +16,12 @@
     align-items: center;
     width: 30%;
     padding: 0 1.5rem;
-    
+    color: #2d2e2f;
+
 }
+
 .rate {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 
@@ -48,6 +50,12 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+.product-price .price{
+    font-weight: bold;
+    font-size:2.5rem;
+    color: #08b810;
+    
 }
 
 .product-price p {
@@ -118,4 +126,16 @@
     align-items: center;
     gap: .5rem;
     color: #908f8d;
+}
+
+.input-frete-button .cep {
+    width: 18rem;
+    height: 3rem;
+    border-radius: .5rem;
+}
+
+.input-frete-button button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
 }

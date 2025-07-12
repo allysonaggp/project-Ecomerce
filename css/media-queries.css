@@ -80,16 +80,26 @@
   .download-options>div {
     display: inline;
   }
-  .download-options>div img{
+
+  .download-options>div img {
     width: 120px;
 
   }
-  .copyright{
+
+  .copyright {
     font-size: 0.8rem;
 
   }
-  .logo-footer{
-  text-align: center;
-  width: auto
-}
+
+  .logo-footer {
+    text-align: center;
+    width: auto
+  }
+
+  .box-product {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+  }
 }
