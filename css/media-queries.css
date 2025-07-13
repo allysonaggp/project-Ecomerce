@@ -100,27 +100,57 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    
-    
-    
-    
 
   }
+
   .box-product-info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
-    
-}
+
+  }
 
 
-.box-product-img img{
+  .box-product-img img {
     width: 27rem;
     max-width: 230%;
-   
 
-}
+  }
 
-  
+  .box-process {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-sell {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .product-quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quantity-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+  .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-quantity-item p {
+    text-align: center;
+  }
+
+
+
 }

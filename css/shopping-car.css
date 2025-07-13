@@ -1,8 +1,7 @@
-
-
 .box-sell {
     padding: 1rem;
     background-color: white;
+
 }
 
 .box-process {
@@ -30,9 +29,10 @@
 
 }
 
-.header-box-products h4{
-margin-top: .5rem;
+.header-box-products h4 {
+    margin-top: .5rem;
 }
+
 .header-box-products button {
     padding: .3rem;
     border-radius: .5rem;
@@ -47,10 +47,9 @@ margin-top: .5rem;
 }
 
 .box-info-sell {
-
     border-radius: .5rem;
-    
     border: solid .1px #e4e4e4;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: 0 1rem;
 }
 
@@ -60,8 +59,9 @@ margin-top: .5rem;
     margin: 2rem 0;
 }
 
-.product-quantity-item{
-    width: 23.5rem;
+.product-quantity-item {
+    width: 21.5rem;
+    max-width: 100%;
 }
 
 .product-quantity button {
@@ -69,9 +69,9 @@ margin-top: .5rem;
     font-size: 10px;
     font-weight: bold;
     border: none;
-    
-   background-color: white;
-    
+
+    background-color: white;
+
 }
 
 .product-quantity .quantity {
@@ -85,7 +85,7 @@ margin-top: .5rem;
     display: flex;
     flex-direction: row;
     gap: .5rem;
-    
+
 
 }
 
@@ -108,7 +108,7 @@ margin-top: .5rem;
 .box-price-text {
     display: flex;
     flex-direction: row;
-    width: 16rem;
+    justify-content: space-around;
     gap: 1rem;
     padding: 1rem 0 .5rem 0;
 }
@@ -118,6 +118,8 @@ margin-top: .5rem;
     border-radius: .5rem;
     padding: 1rem;
     border: solid .1px #e4e4e4;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: auto;
 }
 
 .box-button-sell {
@@ -128,6 +130,7 @@ margin-top: .5rem;
     padding: 1rem;
     gap: .7rem;
     border: solid .1px #e4e4e4;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .box-button-sell button {
@@ -149,7 +152,7 @@ margin-top: .5rem;
     flex-direction: column;
     padding: .5rem 0 0 0;
     gap: 1rem;
-    
+
 
 }
 
