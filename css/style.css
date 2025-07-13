@@ -63,6 +63,10 @@ nav ul li {
   cursor: pointer;
   list-style: none;
 }
+nav ul li a{
+   text-decoration: none;
+   color: white;
+}
 
 nav ul li:hover {
   transform: translateY(-5px);
@@ -189,11 +193,17 @@ main {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
+  
+}
+.product a{
+   text-decoration: none;
+   color: #2c2c2c;
 }
 
 .product-name {
   font-weight: 600;
   margin-top: 0.4rem;
+ 
 }
 
 .rate {
