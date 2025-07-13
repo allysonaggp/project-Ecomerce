@@ -13,11 +13,20 @@
 .box-product-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     width: 30%;
     padding: 0 1.5rem;
     color: #2d2e2f;
+    gap: 3rem;
 
+}
+.box-product-info .for-product {
+    font-weight: bold;
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+}
+.box-product-info ul li{
+    margin: .5rem;
 }
 
 .rate {
@@ -75,6 +84,8 @@
     border: none;
     background-color: #08b810;
     color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .frete {
@@ -91,7 +102,7 @@
 }
 
 .frete-icon {
-    background-color: #078535;
+    background-color:#188df1 ;
     display: flex;
     color: white;
     width: 150px;
@@ -119,13 +130,14 @@
     border-radius: 1rem;
     padding: 1rem;
     gap: 1rem;
+    color: #444341;
 }
 
 .frete-truck-text {
     display: flex;
     align-items: center;
     gap: .5rem;
-    color: #908f8d;
+    color: #08b810;
 }
 
 .input-frete-button .cep {
