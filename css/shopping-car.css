@@ -1,3 +1,11 @@
+p{
+    color: #3c434d;
+}
+
+.price{    
+    color: #0ab70f;
+}
+
 .box-sell {
     padding: 1rem;
     background-color: white;
