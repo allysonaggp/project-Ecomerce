@@ -1,0 +1,200 @@
+.box-sell {
+    padding: 1rem;
+    background-color: white;
+
+
+}
+
+.box-process {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.box {
+    display: flex;
+    border-radius: .5rem;
+    gap: 1rem;
+}
+
+.header-box-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1.6rem 0;
+    height: 3rem;
+
+}
+
+.header-box-products h4{
+margin-top: .5rem;
+}
+.header-box-products button {
+    padding: .3rem;
+    border-radius: .5rem;
+    border: solid .1rem;
+    color: red;
+    border-color: red;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    margin-top: .5rem;
+
+}
+
+.box-info-sell {
+
+    border-radius: .5rem;
+    
+    border: solid .1px #e4e4e4;
+    padding: 0 1rem;
+}
+
+.product-quantity {
+    display: flex;
+    gap: 1rem;
+
+    margin: 2rem 0;
+}
+
+.product-quantity button {
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    
+   background-color: white;
+    
+}
+
+.product-quantity .quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.product-quantity .quantity-number {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+
+}
+
+.product-quantity .quantity-price {
+    width: 15rem;
+    text-align: right;
+}
+
+.product-quantity img {
+    width: 10rem;
+}
+
+.box-price {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.box-price-text {
+    display: flex;
+    flex-direction: row;
+    width: 16rem;
+    gap: 1rem;
+    padding: 1rem 0 .5rem 0;
+}
+
+.box-price-sell {
+    background-color: white;
+    border-radius: .5rem;
+    padding: 1rem;
+    border: solid .1px #e4e4e4;
+}
+
+.box-button-sell {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: .5rem;
+    padding: 1rem;
+    gap: .7rem;
+    border: solid .1px #e4e4e4;
+}
+
+.box-button-sell button {
+    height: 3rem;
+    border-radius: .5rem;
+    background-color: white;
+}
+
+.box-button-sell .continue {
+    background-color: #0ab70f;
+    border: none;
+    color: white;
+
+}
+
+
+.box-price-info {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0 0 0;
+    gap: 1rem;
+    
+
+}
+
+.box-price-info p {
+    font-size: 13px;
+}
+
+.box-price-info-prazo-text {
+    display: flex;
+    flex-direction: row;
+    margin-left: .5rem;
+}
+
+.box-price-info-pix-text {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5.7rem;
+}
+
+
+
+.box-price-prazo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #f2f3f5;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.box-price-prazo div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.box-price-pix {
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    background-color: #cfffe3;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.box-price-pix div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
