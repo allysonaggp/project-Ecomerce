@@ -2,6 +2,7 @@
     background-color: #ffffff;
     display: flex;
     padding: 3rem 0;
+    gap: 1rem;
 
 
 }
@@ -10,10 +11,11 @@
     width: 40%;
 }
 
+
 .box-product-info {
     display: flex;
     flex-direction: column;    
-    width: 30%;
+    width: 100%;
     padding: 1rem 1.5rem;
     color: #2d2e2f;
     gap: 3rem;

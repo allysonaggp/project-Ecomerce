@@ -101,6 +101,7 @@
     flex-direction: column;
     gap: 4rem;
     
+    
 
   }
   .box-product-info {
@@ -109,6 +110,9 @@
     flex-wrap: wrap;
     
     
+}
+.box-product-img img{
+    width: 27rem;
 }
 
   
