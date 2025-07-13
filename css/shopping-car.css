@@ -1,6 +1,4 @@
-p{
-    color: #3c434d;
-}
+
 
 .price{    
     color: #0ab70f;
@@ -9,6 +7,7 @@ p{
 .box-sell {
     padding: 1rem;
     background-color: white;
+    color: #3c434d;
 
 }
 
