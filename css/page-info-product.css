@@ -12,10 +12,9 @@
 
 .box-product-info {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
     width: 30%;
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
     color: #2d2e2f;
     gap: 3rem;
 
