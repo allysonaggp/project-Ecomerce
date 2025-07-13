@@ -102,6 +102,8 @@
     gap: 4rem;
     
     
+    
+    
 
   }
   .box-product-info {
@@ -111,8 +113,13 @@
     
     
 }
+
+
 .box-product-img img{
     width: 27rem;
+    max-width: 230%;
+   
+
 }
 
   
