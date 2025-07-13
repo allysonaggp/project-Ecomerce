@@ -232,6 +232,7 @@ main {
   display: flex;
   padding: 4rem 1rem;
   justify-content: space-evenly;
+
 }
 .testemonial{
   display: flex;
@@ -245,6 +246,7 @@ main {
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.2s;
+  background-color: white;
   
 }
 .testemonial:hover{
