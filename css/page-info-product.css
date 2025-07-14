@@ -124,7 +124,9 @@
     width: 16px;
 }
 
+
 .box-frete {
+    width: auto;
     display: flex;
     flex-direction: column;
     border: solid .1px #e4e4e4;
@@ -143,8 +145,14 @@
     font-size:.8rem ;
 }
 
+.input-frete-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .input-frete-button .cep {
-    width: 18rem;
+    width: 16rem;
     height: 3rem;
     border-radius: .5rem;
 }
@@ -153,4 +161,5 @@
     width: 3rem;
     height: 3rem;
     border-radius: .5rem;
+    margin-left: .58rem;
 }

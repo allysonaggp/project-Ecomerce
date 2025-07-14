@@ -151,6 +151,17 @@
     text-align: center;
   }
 
+.box-process{
+  display: none !important;
+}
+.input-frete-button .cep {
+    width: 43rem !important;
 
+}
+
+.input-frete-button button {
+    width: 6rem !important;
+    
+}
 
 }
