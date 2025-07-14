@@ -124,6 +124,7 @@
 
   .box-info-sell {
     max-width: 100%;
+    min-height: 30rem;
   }
 
   .box-sell {
