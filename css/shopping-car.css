@@ -54,6 +54,7 @@
 }
 
 .box-info-sell {
+    width: 57rem;
     border-radius: .5rem;
     border: solid .1px #e4e4e4;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;

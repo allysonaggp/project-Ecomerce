@@ -122,6 +122,10 @@
     flex-direction: column;
   }
 
+  .box-info-sell {
+    max-width: 100%;
+  }
+
   .box-sell {
     display: flex;
     flex-direction: column;
