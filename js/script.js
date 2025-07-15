@@ -8,9 +8,11 @@ menuButton.addEventListener("click", () => {
 });
 
 
+
 //carrinho de compras
 
 //botao de remover itens do carrinho de compras
+
 const removeProductButtons = document.getElementsByClassName("remove-product-button");
 for (let i = 0; i < removeProductButtons.length; i++) {
   removeProductButtons[i].addEventListener("click", function (event) {
@@ -19,7 +21,6 @@ for (let i = 0; i < removeProductButtons.length; i++) {
     updateTotal()
   })
 }
-
 
 //botao de remover todos os itens do carrinho de compras
 
@@ -45,7 +46,64 @@ function updateTotal() {
     productQuantity = cartProducts[i].getElementsByClassName("product-quantity-number")[0].innerText
     totalAmount = totalAmount + (productPrice * productQuantity)
   }
-  
+
   totalAmount = 'R$:' + totalAmount.toFixed(2).replace(".", ",")
   document.querySelector(".price-total b").innerText = totalAmount
 }
+
+
+
+
+
+
+// botão de acrescentar itens--------------------------------------------------------------------------
+const incrementQuantity = document.getElementsByClassName("increment-quantity-button");
+
+for (let i = 0; i < incrementQuantity.length; i++) {
+  incrementQuantity[i].addEventListener("click", function (event) {
+    // Acessa o elemento pai do botão clicado
+    const parent = event.target.closest(".product-quantity");
+
+    // Encontra o elemento que mostra a quantidade
+    const quantityElement = parent.getElementsByClassName("product-quantity-number")[0];
+
+    // Converte o texto atual em número
+    let currentQuantity = parseInt(quantityElement.innerText);
+
+    // Incrementa
+    currentQuantity += 1;
+
+    // Atualiza o texto na tela
+    quantityElement.innerText = currentQuantity;
+    updateTotal()
+  });
+}
+
+
+// botão de diminuir itens--------------------------------------------------------------------------
+
+const decrementQuantity = document.getElementsByClassName("decrement-quantity-button");
+
+for (let i = 0; i < decrementQuantity.length; i++) {
+  decrementQuantity[i].addEventListener("click", function (event) {
+    const parent = event.target.closest(".product-quantity");
+    const quantityElement = parent.getElementsByClassName("product-quantity-number")[0];
+    let currentQuantity = parseInt(quantityElement.innerText);
+
+    if (currentQuantity > 1) {
+      currentQuantity -= 1;
+      quantityElement.innerText = currentQuantity
+    } else {
+      const productQuantity = event.target.closest(".product-quantity");
+      if (productQuantity) {
+        productQuantity.remove();
+      }
+    }
+
+    updateTotal()
+  });
+}
+
+
+
+
