@@ -9,21 +9,25 @@ menuButton.addEventListener("click", () => {
 
 
 
+
 //carrinho de compras
 
-//botao de remover itens do carrinho de compras
-
+//função de remover itens individuais do carrinho de compras
+function removeProduct(){
 const removeProductButtons = document.getElementsByClassName("remove-product-button");
 for (let i = 0; i < removeProductButtons.length; i++) {
   removeProductButtons[i].addEventListener("click", function (event) {
     //console.log(event.target)
     event.target.parentElement.parentElement.remove()
+    localStorage.removeItem("product");
     updateTotal()
+
   })
 }
+}
 
-//botao de remover todos os itens do carrinho de compras
-
+//função de remover todos os itens do carrinho
+function removeAllProduct (){
 const removeAllProductButton = document.getElementsByClassName("remove-all-product-button");
 //console.log(removeAllProductButton)
 for (let i = 0; i < removeAllProductButton.length; i++) {
@@ -31,12 +35,13 @@ for (let i = 0; i < removeAllProductButton.length; i++) {
     //console.log("clicou")
     event.target.closest('.box-info-sell').querySelectorAll('.product-quantity').forEach(element => element.remove());
     //o ".closest("")"captura a tag pai, e o  ".querySelectorAll("")" seleciona dentro a classe pai 
+    localStorage.removeItem("product");
     updateTotal()
   })
 }
+}
 
-
-//calcular valor do carrinho
+//função de calcular o valor do carrinho
 function updateTotal() {
   let totalAmount = 0
   const cartProducts = document.getElementsByClassName("product-quantity");
@@ -56,7 +61,8 @@ function updateTotal() {
 
 
 
-// botão de acrescentar itens--------------------------------------------------------------------------
+// função de acrescentar e subitrair itens--------------------------------------------------------------------------
+function CartQuantity(){
 const incrementQuantity = document.getElementsByClassName("increment-quantity-button");
 
 for (let i = 0; i < incrementQuantity.length; i++) {
@@ -78,7 +84,6 @@ for (let i = 0; i < incrementQuantity.length; i++) {
     updateTotal()
   });
 }
-
 
 // botão de diminuir itens--------------------------------------------------------------------------
 
@@ -104,6 +109,104 @@ for (let i = 0; i < decrementQuantity.length; i++) {
   });
 }
 
+}
 
 
 
+//processo de adição de itens no carrinho de compras
+
+//salvando dados do produto no local storage
+const addCartButton = document.getElementsByClassName("add-cart-button");
+for (let i = 0; i < addCartButton.length; i++) {
+  addCartButton[i].addEventListener("click", addProductToCart)
+}
+
+function addProductToCart(event) {
+  const button = event.target
+  const productInfo = button.closest(".box-product");
+  const productImage = productInfo.querySelector(".box-product-img img").src
+  const productTitle = productInfo.querySelector(".product-name").innerText
+  const productPrice = productInfo.querySelector(".product-price h2").innerText.replace("R$:", "").replace(",", ".")
+
+  const product = {
+    imagem: productImage,
+    title: productTitle,
+    price: productPrice,
+    
+
+
+  };
+
+
+  // Recupera carrinho atual ou cria novo
+  let cartProduct = JSON.parse(localStorage.getItem("product")) || [];
+
+  // Adiciona produto
+  cartProduct.push(product);
+
+  // Salva no localStorage
+  localStorage.setItem("product", JSON.stringify(cartProduct));
+
+  // Redireciona para a página do carrinho
+  window.location.href = "shopping-car.html";
+
+}
+
+//restaurando itens do localstorage para inclusão na pagina do carrinho de compras
+const cart = JSON.parse(localStorage.getItem("product")) || [];
+const cartContainer = document.querySelector(".cart-products");
+
+cart.forEach((product) => {
+  let newCartProduct = document.createElement("div")
+
+  newCartProduct.classList.add("product-quantity")
+
+  newCartProduct.innerHTML = `
+  <!-- produtos e quantidades e preço-->
+                    <div class="product-quantity">
+                        <div>
+                            <img src="${product.imagem}" alt="${product.title}">
+                        </div>
+                        <div class="product-quantity-item">
+                            <p>${product.title}</p>
+                        </div>
+                        <div class="quantity">
+                            <p>Quantidade</p>
+                            <div class="quantity-number">
+                                <button type="button" class="decrement-quantity-button"><b><</b></button>
+                                <p class="product-quantity-number">1</p>
+                                <button type="button" class="increment-quantity-button"><b>></b></button>
+                            </div>
+                            <button type="button" class="remove-product-button">REMOVER</button>
+                        </div>
+                        <div class="quantity-price">
+                            <div>
+                                <p>Preço à vista no pix</p>
+                            </div>
+                            <div>
+                                <p class="price"><b>R$:${product.price}</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+  cartContainer.appendChild(newCartProduct);
+  CartQuantity();
+  removeProduct();
+  removeAllProduct();
+  updateTotal();
+  
+
+})
+
+
+
+
+
+
+
+
+document.querySelectorAll(".increment-quantity-button").forEach(button => {
+  button.addEventListener("click", () => {
+    console.log("Botão clicado!");
+  });
+});
