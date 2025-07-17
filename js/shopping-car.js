@@ -16,6 +16,7 @@ for (let i = 0; i < addCartButton.length; i++) {
 //botão continuar do carrinho de compras
 btnContinue = document.getElementById("btnContinue")
 btnContinue.addEventListener("click", function () {
+
   
 })
 
@@ -29,7 +30,7 @@ btnVoltar.addEventListener("click", function () {
 
 //funções
 
-//função de remover itens individuais do carrinho de compra
+// função de remover itens individuais do carrinho de compra
 function removeProduct() {
   const removeProductButtons = document.getElementsByClassName("remove-product-button");
   for (let i = 0; i < removeProductButtons.length; i++) {
@@ -43,7 +44,7 @@ function removeProduct() {
   }
 }
 
-//função de remover todos os itens do carrinho de compras
+// função de remover todos os itens do carrinho de compras
 function removeAllProduct() {
   const removeAllProductButton = document.getElementsByClassName("remove-all-product-button");
   //console.log(removeAllProductButton)
@@ -58,7 +59,7 @@ function removeAllProduct() {
   }
 }
 
-//função de calcular o valor total do carrinho
+// função de calcular o valor total do carrinho
 function updateTotal() {
   let totalAmount = 0
   const cartProducts = document.getElementsByClassName("product-quantity");
@@ -116,6 +117,7 @@ function CartQuantity() {
         const productQuantity = event.target.closest(".product-quantity");
         if (productQuantity) {
           productQuantity.remove();
+          localStorage.removeItem("product");
 
         }
       }
@@ -126,7 +128,7 @@ function CartQuantity() {
 
 }
 
-//função dicionar produto do carrinho de compras para o local storage
+// função dicionar produto do carrinho de compras para o local storage
 function addProductToCart(event) {
   const button = event.target
   const productInfo = button.closest(".box-product");
@@ -186,7 +188,7 @@ function buyNow(event) {
   // Redireciona para a página do carrinho
   window.location.href = "shopping-car.html";
 }
-//função recuperar produto do localstorage para inclusão no carrinho de compras
+// função recuperar produto do localstorage para inclusão no carrinho de compras
 function cartContainer() {
 
   const cart = JSON.parse(localStorage.getItem("product")) || [];
