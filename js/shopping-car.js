@@ -13,11 +13,18 @@ for (let i = 0; i < addCartButton.length; i++) {
   addCartButton[i].addEventListener("click", addProductToCart);
 }
 
-//botão continuar do carrinho de compras
+//botão comprar do carrinho de compras
 btnContinue = document.getElementById("btnContinue")
 btnContinue.addEventListener("click", function () {
+  let product = JSON.parse(localStorage.getItem("product")) || [];
 
-  
+  if (product.lengthgi === 0) {
+    alert("carrinho de compras esta vazio")
+  } else {
+    alert("compra efetuada com sucesso")
+    window.location.href = "index.html"
+    localStorage.removeItem("product");
+  }
 })
 
 //botão voltar do carrinho de compras
