@@ -18,7 +18,7 @@ btnContinue = document.getElementById("btnContinue")
 btnContinue.addEventListener("click", function () {
   let product = JSON.parse(localStorage.getItem("product")) || [];
 
-  if (product.lengthgi === 0) {
+  if (product.length === 0) {
     alert("carrinho de compras esta vazio")
   } else {
     alert("compra efetuada com sucesso")
