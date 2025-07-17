@@ -1,18 +1,35 @@
-//abrir barra de navegação no modo mobile
 
-const navbar = document.querySelector("nav");
-const menuButton = document.querySelector(".menu-button");
+//bottões
 
-menuButton.addEventListener("click", () => {
-  navbar.classList.toggle("show-menu");
-});
+//botao comprar agora
+const buyNowButton = document.getElementsByClassName("buy-now");
+for (let i = 0; i < buyNowButton.length; i++) {
+  buyNowButton[i].addEventListener("click", buyNow)
+}
+
+//botao salvar no carrinho
+const addCartButton = document.getElementsByClassName("add-cart-button");
+for (let i = 0; i < addCartButton.length; i++) {
+  addCartButton[i].addEventListener("click", addProductToCart);
+}
+
+//botão continuar do carrinho de compras
+btnContinue = document.getElementById("btnContinue")
+btnContinue.addEventListener("click", function () {
+  
+})
+
+//botão voltar do carrinho de compras
+btnVoltar = document.getElementById("btnVoltar")
+btnVoltar.addEventListener("click", function () {
+  window.location.href = "index.html"
+})
 
 
 
+//funções
 
-//carrinho de compras
-
-//função de remover itens individuais do carrinho de compras
+//função de remover itens individuais do carrinho de compra
 function removeProduct() {
   const removeProductButtons = document.getElementsByClassName("remove-product-button");
   for (let i = 0; i < removeProductButtons.length; i++) {
@@ -26,7 +43,7 @@ function removeProduct() {
   }
 }
 
-//função de remover todos os itens do carrinho
+//função de remover todos os itens do carrinho de compras
 function removeAllProduct() {
   const removeAllProductButton = document.getElementsByClassName("remove-all-product-button");
   //console.log(removeAllProductButton)
@@ -41,7 +58,7 @@ function removeAllProduct() {
   }
 }
 
-//função de calcular o valor do carrinho
+//função de calcular o valor total do carrinho
 function updateTotal() {
   let totalAmount = 0
   const cartProducts = document.getElementsByClassName("product-quantity");
@@ -56,7 +73,7 @@ function updateTotal() {
   document.querySelector(".price-total b").innerText = totalAmount
 }
 
-// função de acrescentar e subitrair itens--------------------------------------------------------------------------
+// função aumentar e diminuir quuntidade de produtos
 function CartQuantity() {
 
   // botão de acrescentar itens--------------------------------------------------------------------------
@@ -109,24 +126,7 @@ function CartQuantity() {
 
 }
 
-
-
-//processo de adição de itens no carrinho de compras
-
-
-//botao comprar agora
-const buyNowButton = document.getElementsByClassName("buy-now");
-for (let i = 0; i < buyNowButton.length; i++) {
-  buyNowButton[i].addEventListener("click", buyNow)
-}
-
-//botao salvar no carrinho
-const addCartButton = document.getElementsByClassName("add-cart-button");
-for (let i = 0; i < addCartButton.length; i++) {
-  addCartButton[i].addEventListener("click", addProductToCart);
-
-}
-//fuunçao dicionar item ao carrinho no local storage
+//função dicionar produto do carrinho de compras para o local storage
 function addProductToCart(event) {
   const button = event.target
   const productInfo = button.closest(".box-product");
@@ -156,7 +156,8 @@ function addProductToCart(event) {
   window.location.href = "index.html";
   alert("item adicionado ao carrinho")
 }
-/// função comprar agora no local storage
+
+/// função comprar produto para o local storage
 function buyNow(event) {
   const button = event.target
   const productInfo = button.closest(".box-product");
@@ -185,17 +186,18 @@ function buyNow(event) {
   // Redireciona para a página do carrinho
   window.location.href = "shopping-car.html";
 }
+//função recuperar produto do localstorage para inclusão no carrinho de compras
+function cartContainer() {
 
-//restaurando itens do localstorage para inclusão na pagina do carrinho de compras
-const cart = JSON.parse(localStorage.getItem("product")) || [];
-const cartContainer = document.querySelector(".cart-products");
+  const cart = JSON.parse(localStorage.getItem("product")) || [];
+  const cartContainer = document.querySelector(".cart-products");
 
-cart.forEach((product) => {
-  let newCartProduct = document.createElement("div")
+  cart.forEach((product) => {
+    let newCartProduct = document.createElement("div")
 
-  newCartProduct.classList.add("product-quantity")
+    newCartProduct.classList.add("product-quantity")
 
-  newCartProduct.innerHTML = `
+    newCartProduct.innerHTML = `
                       <!-- produtos e quantidades e preço-->                    
                         <div>
                             <img src="${product.imagem}" alt="${product.title}">
@@ -222,47 +224,25 @@ cart.forEach((product) => {
                         </div>
                     </div>
                     `;
-  cartContainer.appendChild(newCartProduct);
+    cartContainer.appendChild(newCartProduct);
 
-})
-
-
-
+  })
+}
 
 
+//sequencia correta para o funcionamento das funções
+//1-removeAllProduct
+//2-cartContainer
+//3-removeProduct
+//4-CartQuantity
+//5-updateTotal
 
+// não mudar a ordem
 
-
-
-
-
-document.querySelectorAll(".increment-quantity-button").forEach(button => {
-  button.addEventListener("click", () => {
-    console.log("Botão clicado!");
-  });
-});
-
-
-
-//botão voltar do carrinho de compras
-btnVoltar = document.getElementById("btnVoltar")
-btnVoltar.addEventListener("click", function () {
-  window.location.href = "index.html"
-})
-
-//botão contimuar do carrinho de compras
-btnContinue = document.getElementById("btnContinue")
-btnContinue.addEventListener("click", function () {
-  window.location.href = "index.html"
-  localStorage.removeItem("product");
-  alert("item comprado com sucesso")
-})
-
-
-
-
-
-CartQuantity();
-removeProduct();
 removeAllProduct();
+cartContainer()
+removeProduct();
+CartQuantity();
 updateTotal();
+
+
