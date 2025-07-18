@@ -194,6 +194,7 @@ function buyNow(event) {
   // Redireciona para a página do carrinho
   window.location.href = "shopping-car.html";
 }
+
 // função recuperar produto do localstorage para inclusão no carrinho de compras
 function cartContainer() {
 
