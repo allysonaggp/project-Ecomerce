@@ -97,7 +97,7 @@ bluestore/
 
 ---
 
-## 💡 Próximos Passos (Sugestões de Expansão)
+## 💡 Próximos Passos 
 
 - 🔐 Sistema de login e autenticação
 - 📦 Integração com API de frete por CEP
