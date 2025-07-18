@@ -36,6 +36,7 @@ header {
 }
 .logo {
   color: #0084ff;
+  text-decoration: none;
 }
 .logo span {
   color: white;
