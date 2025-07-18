@@ -41,14 +41,20 @@ function infoContainer() {
     // Preenche textos
     document.querySelector(".product-name").innerText = productInfo.title;
     document.querySelector(".rate").innerText = productInfo.rate;
-    document.querySelector(".price").innerHTML = `<span>R$: </span>${productInfo.price}`;
+    document.querySelector(".price").innerHTML = `<span>R$: </span>${Number(productInfo.price).toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    })}`;
+
 
     // (Opcional) Limpa o localStorage
     localStorage.removeItem("productInfo");
 }
-    
+
 
 
 
 
 window.addEventListener("DOMContentLoaded", infoContainer);
+
+

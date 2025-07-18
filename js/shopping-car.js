@@ -76,7 +76,10 @@ function updateTotal() {
     totalAmount = totalAmount + (productPrice * productQuantity)
   }
 
-  totalAmount = 'R$:' + totalAmount.toFixed(2).replace(".", ",")
+ totalAmount = 'R$: ' + totalAmount.toLocaleString('pt-BR', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
   document.querySelector(".price-total b").innerText = totalAmount
 }
 
@@ -171,7 +174,7 @@ function buyNow(event) {
   const productInfo = button.closest(".box-product");
   const productImage = productInfo.querySelector(".box-product-img img").src
   const productTitle = productInfo.querySelector(".product-name").innerText
-  const productPrice = productInfo.querySelector(".product-price h2").innerText.replace("R$:", "").replace(",", ".")
+ const productPrice = productInfo.querySelector(".product-price h2").innerText.replace("R$:", "").replace(/\./g, '').replace(',', '.').trim();
 
 
   const product = {
