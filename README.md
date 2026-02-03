@@ -54,10 +54,11 @@ Bluestore é uma loja virtual moderna e responsiva, desenvolvida com HTML, CSS e
 | **JavaScript (Vanilla)** | Lógica de interação, manipulação do DOM, controle do carrinho e navegação  |
 | **LocalStorage**         | Persistência de dados entre páginas e sessões                              |
 
+
 ---
 
-
 ## 📁 Estrutura de Diretórios
+````
 bluestore/ 
 ├── index.html 
 ├── page-info-product.html 
@@ -71,18 +72,19 @@ bluestore/
 │   ├── index.js 
 │   ├── mobile.js 
 │   └── shopping-car.js 
-├── images/ │   
-├── cart.png │   
-├── menu.png │   
-├── play-store.png 
-│   ├── app-store.png 
-│   ├── truck.png 
-│   ├── truck green.png 
-│   └── products/ 
-│       └── product-15.png
+├── images/   
+├── cart.png    
+├── menu.png    
+└── play-store.png 
+    ├── app-store.png 
+    ├── truck.png 
+    ├── truck green.png 
+    └── products/ 
+        └── product-15.png
 
-           
+````           
 ---
+
 
 
 ## 📌 Observações
