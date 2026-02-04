@@ -88,6 +88,23 @@ bluestore/
 ````           
 ---
 
+## 📸 Fotos da pagina principal
+
+<img width="1919" height="797" alt="image" src="https://github.com/user-attachments/assets/562ba384-0b8a-477b-85dc-d8f0d8106ffc" />
+<img width="1919" height="774" alt="image" src="https://github.com/user-attachments/assets/6e027231-0515-4ce1-8c14-153b0a5911f4" />
+<img width="1919" height="763" alt="image" src="https://github.com/user-attachments/assets/17ab799d-dbcb-4e1c-898e-86cf96a21dee" />
+<img width="1919" height="519" alt="image" src="https://github.com/user-attachments/assets/e38c5f29-5909-4ee9-bb9a-fe632321ab1f" />
+
+## 📸 Foto da descrição do produto 
+<img width="1919" height="722" alt="image" src="https://github.com/user-attachments/assets/42e28e2d-2019-49be-aba5-faba36aefc9d" />
+
+## 📸 Foto do carrinho de compras
+<img width="1919" height="682" alt="image" src="https://github.com/user-attachments/assets/39e58294-a47c-4c6e-a434-9bc69abf1d15" />
+
+
+
+
+
 
 
 ## 📌 Observações
