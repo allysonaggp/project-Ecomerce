@@ -1,6 +1,9 @@
 # 🛒 Bluestore — Loja Virtual Responsiva
 
-Bluestore é uma loja virtual moderna e responsiva, desenvolvida com HTML, CSS e JavaScript puro. O projeto simula uma experiência de e-commerce com funcionalidades como vitrine de produtos, carrinho de compras dinâmico, cálculo de frete e opções de pagamento.
+Durante meus estudos em front-end, recriei um projeto de e-commerce a partir de um tutorial, mas fui além: implementei carrinho de compras interativo, persistência de dados com localStorage e uma área de pagamento simulada.
+Esse processo me ajudou a consolidar conceitos fundamentais de HTML, CSS e JavaScript, além de exercitar minha capacidade de resolver problemas e criar novas funcionalidades.
+O resultado é o Bluestore, uma loja virtual responsiva que já conta com vitrine de produtos.
+Estou animado para continuar evoluindo esse projeto com login, integração de APIs e painel administrativo. Feedbacks e sugestões são super bem-vindos!
 
 ---
 
